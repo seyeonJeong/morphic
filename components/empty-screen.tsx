@@ -3,20 +3,21 @@ import { ArrowRight } from 'lucide-react'
 
 const exampleMessages = [
   {
-    heading: 'What is GPT-4o mini?',
-    message: 'What is GPT-4o mini?'
+    heading: "What's today's COVID-19 case count?",
+    message: "What's today's COVID-19 case count?"
   },
   {
-    heading: 'Why is Nvidia growing rapidly?',
-    message: 'Why is Nvidia growing rapidly?'
+    heading: 'What is the current risk level of COVID-19?',
+    message: 'What is the current risk level of COVID-19?'
   },
   {
-    heading: 'How does the Vercel AI SDK work?',
-    message: 'How does the Vercel AI SDK work?'
+    heading: 'How do variants of viruses like COVID-19 affect the efficacy of treatments and vaccines?',
+    message: 'How do variants of viruses like COVID-19 affect the efficacy of treatments and vaccines?'
+    
   },
   {
-    heading: 'Tesla vs Rivian',
-    message: 'Tesla vs Rivian'
+    heading: 'How do healthcare systems prepare for and manage pandemics like COVID-19 or influenza outbreaks?',
+    message: 'How do healthcare systems prepare for and manage pandemics like COVID-19 or influenza outbreaks?'
   }
 ]
 export function EmptyScreen({
