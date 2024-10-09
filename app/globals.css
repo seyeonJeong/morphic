@@ -74,3 +74,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left-1 {
+  animation: slideInFromLeft 1.5s ease-out forwards; /* 1.5초로 속도 느리게 */
+  animation-delay: 0.3s;
+  opacity: 0; /* 기본적으로 숨김 */
+}
+
+.slide-in-left-2 {
+  animation: slideInFromLeft 1.5s ease-out forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+

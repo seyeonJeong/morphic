@@ -27,13 +27,12 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
   const { submit } = useActions()
   const router = useRouter()
   const inputRef = useRef<HTMLTextAreaElement>(null)
-  const isFirstRender = useRef(true) // For development environment
+  const isFirstRender = useRef(true)
 
   async function handleQuerySubmit(query: string, formData?: FormData) {
     setInput(query)
     setIsGenerating(true)
 
-    // Add user message to UI state
     setMessages(currentMessages => [
       ...currentMessages,
       {
@@ -42,7 +41,6 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
       }
     ])
 
-    // Submit and get response message
     const data = formData || new FormData()
     if (!formData) {
       data.append('input', query)
@@ -57,13 +55,11 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
     await handleQuerySubmit(input, formData)
   }
 
-  // if query is not empty, submit the query
   useEffect(() => {
     if (isFirstRender.current && query && query.trim().length > 0) {
       handleQuerySubmit(query)
       isFirstRender.current = false
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query])
 
   useEffect(() => {
@@ -73,7 +69,6 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
     }
   }, [aiMessage, setIsGenerating])
 
-  // Clear messages
   const handleClear = () => {
     setIsGenerating(false)
     setMessages([])
@@ -83,11 +78,9 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
   }
 
   useEffect(() => {
-    // focus on input when the page loads
     inputRef.current?.focus()
   }, [])
 
-  // If there are messages and the new button has not been pressed, display the new Button
   if (messages.length > 0) {
     return (
       <div className="fixed bottom-2 md:bottom-8 left-0 right-0 flex justify-center items-center mx-auto pointer-events-none">
@@ -113,12 +106,22 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
 
   return (
     <div
-      className={
-        'fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center'
-      }
+      className="fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center"
     >
       <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6">
-        <div className="relative flex items-center w-full">
+        
+        {/* 입력 필드 위에 추가할 텍스트 */}
+        <div className="mb-2 text-left">
+          <h1 className="text-2xl font-bold text-black slide-in-left-1">Welcome to</h1>
+          <h2 className="text-3xl font-bold text-blue-500 slide-in-left-2"> 
+            Artificial Intelligence
+            Natural Language Processing &
+            Bigdata Analytics Laboratory (ANDlab)
+          </h2>
+        </div>
+        
+        {/* 입력 필드에 위쪽 여백 더 추가 */}
+        <div className="relative flex items-center w-full mt-10"> {/* mt-10로 여백 더 추가 */}
           <Textarea
             ref={inputRef}
             name="input"
@@ -134,13 +137,11 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
               setShowEmptyScreen(e.target.value.length === 0)
             }}
             onKeyDown={e => {
-              // Enter should submit the form
               if (
                 e.key === 'Enter' &&
                 !e.shiftKey &&
                 !e.nativeEvent.isComposing
               ) {
-                // Prevent the default action to avoid adding a new line
                 if (input.trim().length === 0) {
                   e.preventDefault()
                   return
@@ -151,19 +152,13 @@ export function ChatPanel({ messages, query }: ChatPanelProps) {
               }
             }}
             onHeightChange={height => {
-              // Ensure inputRef.current is defined
               if (!inputRef.current) return
 
-              // The initial height and left padding is 70px and 2rem
               const initialHeight = 70
-              // The initial border radius is 32px
               const initialBorder = 32
-              // The height is incremented by multiples of 20px
               const multiple = (height - initialHeight) / 20
 
-              // Decrease the border radius by 4px for each 20px height increase
               const newBorder = initialBorder - 4 * multiple
-              // The lowest border radius will be 8px
               inputRef.current.style.borderRadius =
                 Math.max(8, newBorder) + 'px'
             }}
