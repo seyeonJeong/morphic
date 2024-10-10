@@ -70,6 +70,7 @@ export default function Menubar({ location, children }: Menuprops) {
                 Research
               </div>
             </div>
+
             <div
               className="cursor-pointer p-4 rounded-lg hover:bg-muted"
               onClick={() => handleMenuItemClick('/project2')}
@@ -78,6 +79,7 @@ export default function Menubar({ location, children }: Menuprops) {
                 Publication
               </div>
             </div>
+
             <div
               className="cursor-pointer p-4 rounded-lg hover:bg-muted"
               onClick={() => handleMenuItemClick('/project3')}
@@ -86,6 +88,17 @@ export default function Menubar({ location, children }: Menuprops) {
                 COVID-19 Dashboard
               </div>
             </div>
+
+            <div
+              className="cursor-pointer p-4 rounded-lg hover:bg-muted"
+              onClick={() => handleMenuItemClick('/project4')}
+            >
+              <div className="text-sm font-medium truncate select-none">
+                LLM Powered Autonomous Agents
+              </div>
+            </div>
+
+
           </div>
           <Suspense fallback={<HistorySkeleton />}>{children}</Suspense>
         </div>
