@@ -63,7 +63,7 @@ const LLMAutonomousAgentsPage = () => {
         </li>
         <br></br>
         <li>
-          <strong>Expected Contribution </strong>
+          <strong>Expected Contribution </strong><br></br>
           <p className="text-gray-800 ml-4">
           The research aims to develop methods to minimize the negative effects of interrupts within agent systems, particularly in scenarios involving complex multi-agent interactions. By doing so, it would make significant contributions to fields involving LLMs and multi-agent systems, ensuring that these systems function more robustly even in the face of interruptions.  
           </p>
@@ -87,6 +87,29 @@ const LLMAutonomousAgentsPage = () => {
             />
         </div>
         <p className="text-center text-gray-700 mt-4">Figure 1. Diagram of Flow of Agent</p>
+
+        <div className='text-center'>
+          <a 
+            href="https://normalstory.tistory.com/entry/LangGraph-2-유형별-실습?category=977072" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-center text-gray-700 mt-4 text-xs"
+          >
+            https://normalstory.tistory.com/entry/LangGraph-2-유형별-실습?category=977072
+          </a>
+        </div>
+        <div className="text-center">
+          <a 
+            href="https://nice-engineer.tistory.com/entry/운영체제-인터럽트Interrupt" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-gray-700 mt-4 text-xs"
+          >
+            https://nice-engineer.tistory.com/entry/운영체제-인터럽트Interrupt
+          </a>
+        </div>
+
+
       </div>
 
       </ul>
@@ -143,7 +166,7 @@ const LLMAutonomousAgentsPage = () => {
               />
           </div>
           <p className="text-center text-gray-700 mt-4">Figure 2. Diagram of Priority Queues</p>
-      </div>
+        </div>
       <p>Fig. 2 illustrates this process using a tree-based priority queue structure. Here’s a breakdown of the steps involved:</p><br></br>
       <p id="steps" className="text-xl font-semibold mb-2">Process Steps</p>
         <ol className="list-decimal list-inside mb-6 ml-6">
@@ -182,8 +205,8 @@ const LLMAutonomousAgentsPage = () => {
           </li>
         </ul>
 
-        <p>For example, consider a scenario where agents are tasked with processing vast amounts of data for an LLM application. As different components of the data become available, the system can prioritize which data chunks are most important to process first, ensuring that critical parts are processed in a timely manner.</p>
-        <p><strong>Expceted Contributions</strong></p>
+        <p>For example, consider a scenario where agents are tasked with processing vast amounts of data for an LLM application. As different components of the data become available, the system can prioritize which data chunks are most important to process first, ensuring that critical parts are processed in a timely manner.</p><br></br>
+        <p><strong>Expceted Contributions</strong></p><br></br>
         <p>The research is expected to make significant contributions to the field of multi-agent systems by providing a robust framework for task prioritization:</p><br></br>
 
         <ul className="list-disc list-inside mb-6">
