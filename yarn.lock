@@ -325,10 +325,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@next/env@14.2.8":
-  version "14.2.8"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.8.tgz"
-  integrity sha512-L44a+ynqkolyNBnYfF8VoCiSrjSZWgEHYKkKLGcs/a80qh7AkfVUD/MduVPgdsWZ31tgROR+yJRA0PZjSVBXWQ==
+"@next/env@14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.15.tgz"
+  integrity sha512-S1qaj25Wru2dUpcIZMjxeMVSwkt8BK4dmWHHiBuRstcIyOsMapqT4A4jSB6onvqeygkSSmOkyny9VVx8JIGamQ==
 
 "@next/eslint-plugin-next@14.2.8":
   version "14.2.8"
@@ -337,10 +337,15 @@
   dependencies:
     glob "10.3.10"
 
-"@next/swc-win32-x64-msvc@14.2.8":
-  version "14.2.8"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.8.tgz"
-  integrity sha512-EnPKv0ttq02E9/1KZ/8Dn7kuutv6hy1CKc0HlNcvzOQcm4/SQtvfws5gY0zrG9tuupd3HfC2L/zcTrnBhpjTuQ==
+"@next/swc-linux-x64-gnu@14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.2.15.tgz"
+  integrity sha512-kE6q38hbrRbKEkkVn62reLXhThLRh6/TvgSP56GkFNhU22TbIrQDEMrO7j0IcQHcew2wfykq8lZyHFabz0oBrA==
+
+"@next/swc-linux-x64-musl@14.2.15":
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.2.15.tgz"
+  integrity sha512-PZ5YE9ouy/IdO7QVJeIcyLn/Rc4ml9M2G4y3kCM9MNf1YKvFY4heg3pVa/jQbMro+tP6yc4G2o9LjAz1zxD7tQ==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -373,15 +378,15 @@
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.9.0.tgz"
   integrity sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==
 
-"@oven/bun-windows-x64-baseline@1.1.27":
+"@oven/bun-linux-x64-baseline@1.1.27":
   version "1.1.27"
-  resolved "https://registry.npmjs.org/@oven/bun-windows-x64-baseline/-/bun-windows-x64-baseline-1.1.27.tgz"
-  integrity sha512-Qfn80kb9eDZaecCVVVxFpNfuHvo7h4yQlh278u9Vs0vSrHTYG4dxoH4SWkZSzHa44ZwKRpa1TmMfDVhX/HE+mA==
+  resolved "https://registry.npmjs.org/@oven/bun-linux-x64-baseline/-/bun-linux-x64-baseline-1.1.27.tgz"
+  integrity sha512-495DOwgzpr/0ta/AaSRYb7EJeAEAf38cBOUO6oJzCxT5NdWRbZeAo5bmqcrBke1AexnKPA7RUN9Z5+t1TvqjtQ==
 
-"@oven/bun-windows-x64@1.1.27":
+"@oven/bun-linux-x64@1.1.27":
   version "1.1.27"
-  resolved "https://registry.npmjs.org/@oven/bun-windows-x64/-/bun-windows-x64-1.1.27.tgz"
-  integrity sha512-LIZRqlyLpMEkmbsA+d/GmQnEdJzMGlFRlVtdQnyjTskW+uMv+lBHmWu7CkdcCCVPtf6wRDYgdkjpQOAw1wle5g==
+  resolved "https://registry.npmjs.org/@oven/bun-linux-x64/-/bun-linux-x64-1.1.27.tgz"
+  integrity sha512-ktplW245+ke0GIKdBEzZisZ4mwAqdPYmW3RzhDPGB7193jVmaAE1YVUscrWkTAdfl6YMGb99IXThrhcXSddeAw==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -2387,6 +2392,13 @@ format@^0.2.0:
   resolved "https://registry.npmjs.org/format/-/format-0.2.2.tgz"
   integrity sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==
 
+framer-motion@^11.11.8:
+  version "11.11.8"
+  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-11.11.8.tgz"
+  integrity sha512-mnGQNEoz99GtFXBBPw+Ag5K4FcfP5XrXxrxHz+iE4Lmg7W3sf2gKmGuvfkZCW/yIfcdv5vJd6KiSPETH1Pw68Q==
+  dependencies:
+    tslib "^2.4.0"
+
 fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
@@ -3802,12 +3814,12 @@ next-themes@^0.3.0:
   resolved "https://registry.npmjs.org/next-themes/-/next-themes-0.3.0.tgz"
   integrity sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==
 
-next@^14.2.3:
-  version "14.2.8"
-  resolved "https://registry.npmjs.org/next/-/next-14.2.8.tgz"
-  integrity sha512-EyEyJZ89r8C5FPlS/401AiF3O8jeMtHIE+bLom9MwcdWJJFBgRl+MR/2VgO0v5bI6tQORNY0a0DR5sjpFNrjbg==
+next@^14.2.15:
+  version "14.2.15"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.15.tgz"
+  integrity sha512-h9ctmOokpoDphRvMGnwOJAedT6zKhwqyZML9mDtspgf4Rh3Pn7UTYKqePNoDvhsWBAO5GoPNYshnAUGIazVGmw==
   dependencies:
-    "@next/env" "14.2.8"
+    "@next/env" "14.2.15"
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -3815,15 +3827,15 @@ next@^14.2.3:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.8"
-    "@next/swc-darwin-x64" "14.2.8"
-    "@next/swc-linux-arm64-gnu" "14.2.8"
-    "@next/swc-linux-arm64-musl" "14.2.8"
-    "@next/swc-linux-x64-gnu" "14.2.8"
-    "@next/swc-linux-x64-musl" "14.2.8"
-    "@next/swc-win32-arm64-msvc" "14.2.8"
-    "@next/swc-win32-ia32-msvc" "14.2.8"
-    "@next/swc-win32-x64-msvc" "14.2.8"
+    "@next/swc-darwin-arm64" "14.2.15"
+    "@next/swc-darwin-x64" "14.2.15"
+    "@next/swc-linux-arm64-gnu" "14.2.15"
+    "@next/swc-linux-arm64-musl" "14.2.15"
+    "@next/swc-linux-x64-gnu" "14.2.15"
+    "@next/swc-linux-x64-musl" "14.2.15"
+    "@next/swc-win32-arm64-msvc" "14.2.15"
+    "@next/swc-win32-ia32-msvc" "14.2.15"
+    "@next/swc-win32-x64-msvc" "14.2.15"
 
 node-fetch@^2.6.12:
   version "2.7.0"
