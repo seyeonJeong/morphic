@@ -8,8 +8,15 @@ import { ArrowRight } from 'lucide-react'
 import { EmptyScreen } from './empty-screen'
 import { cn } from '@/lib/utils'
 
+interface Message {
+  id: string
+  text: string
+  sender: 'user' | 'bot'
+}
+
 interface ChatPanelProps {
-  query?: string
+  messages: Message[] // 적절한 타입으로 정의
+  query: string | undefined
 }
 
 export function ChatPanel({ query }: ChatPanelProps) {
@@ -42,20 +49,19 @@ export function ChatPanel({ query }: ChatPanelProps) {
   }, [])
 
   return (
-    <div
-      className="fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center"
-    >
+    <div className="fixed bottom-8 left-0 right-0 top-10 mx-auto h-screen flex flex-col items-center justify-center">
       <form onSubmit={handleSubmit} className="max-w-2xl w-full px-6">
         {/* 입력 필드 위에 추가할 텍스트 */}
         <div className="mb-2 text-left">
-          <h1 className="text-2xl font-bold text-black slide-in-left-1">Welcome to</h1>
-          <h2 className="text-3xl font-bold text-blue-500 slide-in-left-2"> 
-            Artificial Intelligence
-            Natural Language Processing &
-            Bigdata Analytics Laboratory (ANDlab)
+          <h1 className="text-2xl font-bold text-black slide-in-left-1">
+            Welcome to
+          </h1>
+          <h2 className="text-3xl font-bold text-blue-500 slide-in-left-2">
+            Artificial Intelligence Natural Language Processing & Bigdata
+            Analytics Laboratory (ANDlab)
           </h2>
         </div>
-        
+
         {/* 입력 필드에 위쪽 여백 더 추가 */}
         <div className="relative flex items-center w-full mt-10">
           <Textarea
